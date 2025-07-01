@@ -14,7 +14,7 @@ const App = () => {
       },[])
   
       async function fetchData(){
-          let getAppointments=await fetch("http://localhost:5000");
+          let getAppointments=await fetch("https://medical-appointments-1.onrender.com");
           getAppointments=await getAppointments.json();
           console.log(getAppointments);
   
