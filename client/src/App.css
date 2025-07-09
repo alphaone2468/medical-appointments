@@ -4,6 +4,10 @@ body {
   margin: 0;
   padding: 20px;
 }
+*{
+  margin: 0px;
+  padding: 0px;
+}
 
 .title {
   text-align: center;
@@ -12,7 +16,7 @@ body {
 
 .container {
   display: flex;
-  gap: 20px;
+  gap: 5px;
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -24,6 +28,9 @@ body {
   border: 1px solid #ccc;
   padding: 10px;
   border-radius: 8px;
+  max-height: calc(100vh - 167px);
+overflow-y: auto;
+overflow-x: hidden
 }
 
 .column h2 {
@@ -31,6 +38,7 @@ body {
   color: #005a8d;
   border-bottom: 1px solid #ddd;
   padding-bottom: 5px;
+  margin: 10px 0px;
 }
 
 .card {
@@ -45,4 +53,43 @@ body {
 .card strong {
   display: inline-block;
   width: 80px;
+}
+
+.appointment-card {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  transition: box-shadow 0.3s;
+  position: relative;
+}
+
+.appointment-card:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.appointment-card .icon-wrapper {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+.appointment-card:hover .icon-wrapper {
+  opacity: 1;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 30px;
+  align-items: center;
+}
+.date{
+  text-align: right;
+  font-weight: 600;
+}
+.providerName{
+  margin:10px 20px;
 }

@@ -36,7 +36,7 @@ const actionTableSchema = new mongoose.Schema({
     },
     status : {
         type : String,
-        enum : ['open', 'booked'],
+        enum : ['open', 'booked','request','processed'],
         required : true,
     },
     chiefComplaint : {
