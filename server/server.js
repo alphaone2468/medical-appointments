@@ -11,7 +11,7 @@ mongoose.connect(process.env.MONGODB_URL).then(()=>{
 
 app.use(express.json());
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: "https://medical-appointments-data.netlify.app",
     credentials:true
 }));
 

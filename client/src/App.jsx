@@ -32,7 +32,7 @@ const seconds = date.getSeconds();
   
       async function fetchData(){
         // https://medical-appointments-1.onrender.com
-          let getAppointments=await fetch("http://localhost:5000");
+          let getAppointments=await fetch("https://medical-appointments-1.onrender.com");
           getAppointments=await getAppointments.json();
           console.log(getAppointments);
   
@@ -49,7 +49,7 @@ const seconds = date.getSeconds();
 
 
     async function bookAppointment(id,title) {
-    let response =await fetch(`http://localhost:5000/book-appointment/${id}`,{
+    let response =await fetch(`https://medical-appointments-1.onrender.com/book-appointment/${id}`,{
       method:"POST",
       body:JSON.stringify({
         title:title
