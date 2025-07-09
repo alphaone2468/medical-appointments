@@ -18,7 +18,6 @@ app.use(cors({
 // https://medical-appointments-data.netlify.app
 
 app.get("/",async(req,res)=>{
-
     const data = await ActionTable.find({});
     console.log(data.length)
     return res.status(200).json({status:"SUCCESS",appointments:data});
