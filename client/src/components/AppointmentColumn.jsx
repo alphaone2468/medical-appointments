@@ -31,6 +31,11 @@ const AppointmentColumn = ({ title, data, bookAppointment }) => {
       <div>
         <strong>Time:</strong> {(new Date(apt.time).toLocaleString()==="Invalid Date"?"PT Will Schedule":new Date(apt.time).toLocaleString())}
       </div>
+      {(title=="Prescription Refill") && 
+      <div>
+        <strong>medicationName:</strong> {(apt.medicationName)?apt.medicationName:"-"}
+      </div>
+      }
 
       {title.toLowerCase() === "new appointment" && (
   <>
